@@ -1,5 +1,7 @@
 <template>
     <div class="index">
+        <h1 class="top">{{ text }}</h1>
+
         <div class="index-hd">
             <div class="index-desc">目录</div>
         </div>
@@ -11,6 +13,8 @@
                 </router-link>
             </div>
         </div>
+
+        <div class="time" v-datefomat="time"></div>
 
         <div class='solar-syst'>
             <div class='sun'></div>
@@ -34,7 +38,10 @@ export default {
     name: 'home',
     data () {
         return {
-            menu: []
+            menu: [],
+            text: '学习vue',
+            nowIndex: 0,
+            time: new Date()
         }
     },
     methods: {
@@ -57,7 +64,7 @@ export default {
         width: 100vw;
         height: 100vh;
         background-color: rgba(0,0,0,.8);
-        overflow: hidden;
+        overflow-y: scroll;
 
         background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
         background-size: 400% 400%;
@@ -75,7 +82,7 @@ export default {
             font-size: 1.6rem;
         }
         &-bd {
-            padding: 0 1rem 1.5rem;
+            padding: 0 1rem;
         }
     }
     .kind {
@@ -86,7 +93,8 @@ export default {
             font-size: 1rem;
             margin: .5rem 0;
             padding: .5rem;
-            background-color: #B0C4DE;
+            /*background-color: #B0C4DE;*/
+            background-color: rgba(255,255,255,.3);
             border-radius: 5px;
             overflow: hidden;
             text-align: center;
@@ -96,6 +104,40 @@ export default {
             &:first-child {
                 margin-top: 0;
             }
+        }
+    }
+
+    .time {
+        color: #fff;
+        text-align: right;
+        padding: 1rem;
+    }
+
+    .top {
+        color: #fff;
+        padding-top: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1;
+        animation: letterspacing 1s infinite alternate ease-in-out;
+        display: block;
+        letter-spacing: .3rem;
+    }
+
+    @keyframes letterspacing {
+        0% {
+            letter-spacing: -72px;
+            filter: blur(20px);
+        }
+
+        40% {
+            filter: blur(6px);
+        }
+
+        80% {
+            letter-spacing: 8px;
+            filter: blur(0);
         }
     }
 

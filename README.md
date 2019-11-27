@@ -1,5 +1,5 @@
-# vue-demo
-Some demo about Vue
+# vue-collection
+Some of my own collections are integrated into Vue
 
 ## Project setup
 ```
