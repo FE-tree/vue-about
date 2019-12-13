@@ -64,7 +64,9 @@ export default {
         width: 100vw;
         height: 100vh;
         background-color: rgba(0,0,0,.8);
+        overflow-x: hidden;
         overflow-y: scroll;
+        transform: translateY(-2rem);
 
         background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
         background-size: 400% 400%;
