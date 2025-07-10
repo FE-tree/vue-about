@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-27 14:08:02
+ * @LastEditTime: 2021-05-11 10:25:39
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-demo\src\components\vue-header.vue
+-->
 <template>
     <div id="vheader">
         <router-link to="/" class="left">
@@ -27,7 +35,7 @@ export default {
 <style scoped lang="scss">
     #vheader {
         width: 100%;
-        height: 2rem;
+        height: 2.6rem;
         position: fixed;
         top: 0;
         left: 0;
@@ -37,7 +45,7 @@ export default {
         .left {
             display: flex;
             align-items: center;
-            line-height: 2rem;
+            line-height: 2.6rem;
             position: absolute;
             left: 10px;
             &:active {
@@ -46,7 +54,7 @@ export default {
             }
         }
         .title {
-            line-height: 2rem;
+            line-height: 2.6rem;
             font-size: 1.2rem;
             text-align: center;
         }

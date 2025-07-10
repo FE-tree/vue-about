@@ -17,7 +17,9 @@ export default new Router({
             children: [
                 { path: 'Login', name: 'Login', component: () => import('./pages/Login.vue') },
                 { path: 'g2048', name: 'G2048', component: () => import('./pages/2048.vue') },
-                { path: 'raffle', name: 'Raffle', component: () => import('./pages/raffle.vue') }
+                { path: 'raffle', name: 'Raffle', component: () => import('./pages/raffle.vue') },
+                { path: 'quill', name: 'Quill', component: () => import('./pages/quill.vue') },
+                { path: 'signature', name: 'Signature', component: () => import('./pages/signature.vue')}
             ]
         },
         {

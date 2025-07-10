@@ -39,7 +39,7 @@ export default {
     data () {
         return {
             menu: [],
-            text: '学习vue',
+            text: 'vue demo',
             nowIndex: 0,
             time: new Date()
         }
